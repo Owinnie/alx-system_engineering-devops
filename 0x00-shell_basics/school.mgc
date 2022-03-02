@@ -1,2 +1,2 @@
-0 search/alx-system_engineering-devops/0x00-shell_basics SCHOOL File containing "School"
-!:mime School
+0 string SCHOOL "School"
+!:mime text/x-School
