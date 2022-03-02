@@ -1,2 +1,2 @@
 #!/bin/bash
-cp find . -name *.html /alx-system_engineering-devops
+find /alx-system_engineering-devops/0x00-shell_basics -name '*.html' -exec cp -t ~/alx-system_engineering-devops {} +
