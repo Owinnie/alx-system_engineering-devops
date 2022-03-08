@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(ls) | grep d $PATH | $#
+echo $PATH | grep -d
