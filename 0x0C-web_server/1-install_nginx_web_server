@@ -2,5 +2,7 @@
 # Install nginx --> engine x
 apt update
 apt install -y nginx
+service nginx start
+ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
 service nginx restart
