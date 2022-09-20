@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Install nginx --> engine x
-apt update
-apt install -y nginx
-echo "Hello World!" > /var/www/html/index.html
-service nginx restart
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "Hello World!" | sudo tee -a /var/www/html/index.html
+sudo sed -i '36a rewrite ^/redirect_me https://studymasterguide.com/;' /etc/nginx/sites-available/default
+sudo service nginx restart
