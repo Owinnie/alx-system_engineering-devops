@@ -8,6 +8,6 @@ sudo chown -R "$USER":"$USER" /var/www/html
 sudo chmod -R 755 /var/www
 echo 'Hello World!' > /var/www/html/index.html
 echo "Ceci n'est pas une page" > /var/www/html/404.html
-sudo sed -i '/^\slocation.*/i \        add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
-sudo sed -i "11i\add_header X-Served-By $hostname;" /etc/nginx/nginx.conf
+
+echo "11i\add_header X-Served-By $hostname;" >> /etc/nginx/nginx.conf
 sudo service nginx restart
