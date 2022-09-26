@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Configure new nginx server to have a custom header
+sudo apt update
+sudo apt install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo mkdir -p /var/www/html
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+echo 'Hello World!' > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+sed -i "11i\add_header X-Served-By $hostname;" /etc/nginx/nginx.conf
+sudo service nginx restart
