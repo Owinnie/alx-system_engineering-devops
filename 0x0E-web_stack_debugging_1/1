@@ -1,3 +1,0 @@
-sudo: stop: command not found
- * Restarting nginx nginx
-   ...done.
