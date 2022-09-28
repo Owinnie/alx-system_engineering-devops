@@ -14,5 +14,12 @@ sudo chmod -R 755 /var/www
 echo 'Hello World!' > /var/www/html/index.html
 echo "Ceci n'est pas une page" > /var/www/html/404.html
 
-echo "add_header X-Served-By $hostname;" >> /etc/nginx/nginx.conf
+printf %s "server {
+  listen 80 default_server;
+  listen [::]:80 default_server;
+  add_header X-Served-By $hostname;
+  root /var/www/html;
+  index index.html index.htm;
+}" > /etc/nginx/sites-available/default
+
 sudo service nginx restart
