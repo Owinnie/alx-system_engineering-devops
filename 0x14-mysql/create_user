@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # create a user: set password, and update permissions
-echo "CREATE USER 'holberton_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'projectcorrection280hbtn';\n
-GRANT REPLICATION SLAVE ON *.* TO 'holberton_user'@'localhost';\n
+echo "CREATE USER 'holberton_user'@'replica_server_ip' IDENTIFIED WITH mysql_native_password BY 'projectcorrection280hbtn';\n
+GRANT REPLICATION SLAVE ON *.* TO 'holberton_user'@'replica_server_ip';\n
 FLUSH PRIVILEGES;" > cmd.sql
 sudo mysql < cmd.sql
