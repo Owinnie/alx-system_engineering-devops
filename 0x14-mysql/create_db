@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# create db on web-01
+echo "CREATE DATABASE IF NOT EXISTS tyrell_corp;\n
+USE tyrell_corp;\n
+CREATE TABLE IF NOT EXISTS nexus6(id INT NOT NULL, amnt INT NOT NULL);\n
+INSERT INTO nexus6 VALUE (1, 2);\n
+GRANT SELECT ON *.* TO 'holberton_user'@'localhost';\n" > db.sql
+sudo mysql < db.sql
