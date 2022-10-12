@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# create a user: set password, and update permissions
+echo "FLUSH PRIVILEGES;\n
+CREATE USER 'replica_user'@'%' IDENTIFIED BY 'projectcorrection280hbtn';\n
+GRANT REPLICATION CLIENT ON *.* TO 'replica_user'@'%';\n
+GRANT SELECT ON mysql.user TO 'holberton_user'@'localhost'" > rep.sql
+sudo mysql < rep.sql
