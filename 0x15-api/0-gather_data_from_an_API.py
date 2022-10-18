@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""From API"""
+"""From API. 0. Gather data from an API.
+Return information about an employee based
+on id."""
 from sys import argv
 import csv
 import json
