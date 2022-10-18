@@ -2,8 +2,6 @@
 """From API. 0. Gather data from an API.
 Return information about an employee based
 on id."""
-import csv
-import json
 import requests
 from sys import argv
 
