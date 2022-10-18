@@ -19,7 +19,7 @@ if __name__ == "__main__":
             . format(argv[1])
         )
     ).json()
-    with open(f"{argv[1]}.csv", "w") as cf:
+    with open("{}.csv".format(argv[1]), "w") as cf:
         wtr = csv.writer(cf, quoting=csv.QUOTE_ALL)
         [wtr.writerow(
             [
