@@ -19,7 +19,7 @@ if __name__ == "__main__":
             . format(argv[1])
         )
     ).json()
-    with open(f"{argv[1]}.json", "w") as jf:
+    with open("{}.json".format(argv[1]), "w") as jf:
         json.dump(
             {
                 argv[1]: [
