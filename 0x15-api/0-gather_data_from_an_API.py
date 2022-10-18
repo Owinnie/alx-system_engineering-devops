@@ -2,10 +2,10 @@
 """From API. 0. Gather data from an API.
 Return information about an employee based
 on id."""
-from sys import argv
 import csv
 import json
 import requests
+from sys import argv
 
 
 if __name__ == "__main__":
