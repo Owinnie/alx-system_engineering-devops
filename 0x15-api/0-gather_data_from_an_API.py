@@ -25,4 +25,4 @@ if __name__ == "__main__":
     print(
         "Employee {} is done with tasks {}/{}"
         .format(user.get('name'), len(done), len(resp)))
-    [print(f"\t {tsk}") for tsk in done]
+    [print("\t {}".format(tsk)) for tsk in done]
