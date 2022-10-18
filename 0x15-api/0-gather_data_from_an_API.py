@@ -25,7 +25,6 @@ if __name__ == "__main__":
         ).json()
     done = [i.get('title') for i in resp if i.get('completed') is True]
     print(
-        f"Employee {user.get('name')}
-        is done with tasks {len(done)}/{len(resp)}"
-        )
+        "Employee {} is done with tasks {}/{}"
+        .format(user.get('name'), len(done), len(resp)))
     [print(f"\t {tsk}") for tsk in done]
