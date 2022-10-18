@@ -3,7 +3,7 @@
 Return information about an employee based
 on id."""
 import requests
-from sys import argv
+import sys
 
 
 if __name__ == "__main__":
@@ -11,14 +11,14 @@ if __name__ == "__main__":
         requests
         .get(
             'https://jsonplaceholder.typicode.com/todos',
-            params={"userId": argv[1]}
+            params={"userId": sys.argv[1]}
             )
         ).json()
     user = (
         requests
         .get(
             'https://jsonplaceholder.typicode.com/users/{}'
-            . format(argv[1])
+            . format(sys.argv[1])
             )
         ).json()
     done = [i.get('title') for i in resp if i.get('completed') is True]
