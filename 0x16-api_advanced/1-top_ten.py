@@ -1,18 +1,20 @@
 #!/usr/bin/python3
 """ 1. Top Ten """
 
-import requests as rq
+import requests
 
 
 def top_ten(subreddit):
-    """ Print titles of top 10 hot posts """
-    if subreddit:
-        res = rq.get('http://www.reddit.com/r/{}/about.json'.format(subreddit),
+    """prints the titles of the top ten hot posts for a given subreddit"""
+    if subreddit is None or type(subreddit) is not str:
+        print(None)
+    r = requests.get('http://www.reddit.com/r/{}/hot.json'.format(subreddit),
                      headers={'User-Agent': 'Python/requests:APIproject:\
                      v1.0.0 (by /u/aaorrico23)'},
                      params={'limit': 10}).json()
-        pos_10 = res.get('data', {}).get('children', None)
-        if pos_10:
-            for post in pos_10:
-                print(post.get('data', {}).get('title', None))
-    print("None")
+    posts = r.get('data', {}).get('children', None)
+    if posts is None or (len(posts) > 0 and posts[0].get('kind') != 't3'):
+        print(None)
+    else:
+        for post in posts:
+            print(post.get('data', {}).get('title', None))
