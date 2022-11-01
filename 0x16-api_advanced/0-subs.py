@@ -10,6 +10,6 @@ def number_of_subscribers(subreddit):
         res = rq.get('http://www.reddit.com/r/{}/about.json'.format(subreddit),
                      headers={'User-Agent': 'Python/requests:APIproject:\
 v1.0.0 (by /u/aaorrico23)'}).json()
-        sub = resp.get("data", {}).get("subscribers", 0)
+        sub = res.get("data", {}).get("subscribers", 0)
         return sub
     return 0
