@@ -4,7 +4,7 @@
 import requests as rq
 
 
-def recurse(subreddit, hot_list=[]):
+def recurse(subreddit, hot_list=[], after=None):
     """ Return titles of all hot articles """
     if subreddit:
         res = rq.get('http://www.reddit.com/r/{}/about.json'.format(subreddit),
