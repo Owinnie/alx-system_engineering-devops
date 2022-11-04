@@ -5,4 +5,4 @@
 ![image](https://user-images.githubusercontent.com/99328720/194050719-c46450ce-0db2-41e3-873b-f9e3dde1ab6a.png)
 
 
-https://studymasterguide.com/what-really-happens-when-you-type-a-url-in-your-browser-and-hit-enter.html
+https://studymasterguide.com/temp/articles/life-what-happens/what-really-happens-when-you-type-a-url-in-your-browser-and-hit-enter.html
